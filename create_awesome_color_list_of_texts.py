@@ -8,8 +8,7 @@ import warnings
 from mpire import WorkerPool
 
 def create_awesome_color_text(text,hexcode):
-    results = terminalnexus.set(f"{hexcode}") + f"{text}" +
-terminalnexus.reset()
+    results = terminalnexus.set(f"{hexcode}") + f"{text}" + terminalnexus.reset()
     return results
 
 def create_awesome_color_texts(list_of_texts,hexcode,progress_bar):
@@ -22,8 +21,7 @@ def create_awesome_color_texts(list_of_texts,hexcode,progress_bar):
         results.append(my_dict)
     num_cores = max(multiprocessing.cpu_count()//2,1)
     with WorkerPool(n_jobs=num_cores,daemon=False) as pool:
-        results =
-pool.map(create_awesome_color_text,results,progress_bar=progress_bar)
+        results = pool.map(create_awesome_color_text,results,progress_bar=progress_bar)
     return results
 
 def print_results(results):
