@@ -33,7 +33,7 @@ def print_results(results):
 if __name__=="__main__":
     
     list_of_texts = [
-        "Hello"*100,
+        "Hello "*100,
         "World"
     ]
     hexcode = "ff0000"
@@ -43,7 +43,7 @@ if __name__=="__main__":
 
     list_of_texts = [
         "Hello",
-        "World"*100
+        " World"*100
     ]
     hexcode = "00ff00"
     progress_bar = True
@@ -51,8 +51,8 @@ if __name__=="__main__":
     print_results(results)
 
     list_of_texts = [
-        "Hello"*100,
-        "World"*100
+        "Hello "*100,
+        " World"*100
     ]
     hexcode = "000000"
     progress_bar = True
