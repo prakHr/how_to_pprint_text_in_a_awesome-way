@@ -31,20 +31,30 @@ def print_results(results):
         print(NEWLINE)
 
 if __name__=="__main__":
+    
+    list_of_texts = [
+        "Hello"*100,
+        "World"
+    ]
+    hexcode = "ff0000"
+    progress_bar = True
+    results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
+    print_results(results)
+
     list_of_texts = [
         "Hello",
         "World"*100
     ]
-    hexcode = "00ff0f"
+    hexcode = "00ff00"
     progress_bar = True
     results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
     print_results(results)
 
     list_of_texts = [
         "Hello"*100,
-        "World"
+        "World"*100
     ]
-    hexcode = "ff0000"
+    hexcode = "000000"
     progress_bar = True
     results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
     print_results(results)
