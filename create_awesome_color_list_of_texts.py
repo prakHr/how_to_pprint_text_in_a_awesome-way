@@ -24,8 +24,7 @@ def create_awesome_color_texts(list_of_texts,hexcode,progress_bar):
         results = pool.map(create_awesome_color_text,results,progress_bar=progress_bar)
     return results
 
-def print_results(results):
-    NEWLINE = "\n"
+def print_results(results,NEWLINE):
     for result in results:
         print(result)
         print(NEWLINE)
@@ -39,7 +38,8 @@ if __name__=="__main__":
     hexcode = "ff0000"
     progress_bar = True
     results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
-    print_results(results)
+    NEWLINE = "\n"
+    print_results(results,NEWLINE)
 
     list_of_texts = [
         "Hello",
@@ -48,7 +48,9 @@ if __name__=="__main__":
     hexcode = "00ff00"
     progress_bar = True
     results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
-    print_results(results)
+    NEWLINE = "\n"
+    print_results(results,NEWLINE)
+
 
     list_of_texts = [
         "Hello "*100,
@@ -57,4 +59,5 @@ if __name__=="__main__":
     hexcode = "000000"
     progress_bar = True
     results = create_awesome_color_texts(list_of_texts,hexcode,progress_bar)
-    print_results(results)
+    NEWLINE = "\n"
+    print_results(results,NEWLINE)
